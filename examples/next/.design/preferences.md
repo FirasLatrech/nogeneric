@@ -86,6 +86,11 @@ liked. Don't rebuild it unless asked again.
 - Validation errors: red border + alert icon + a plain-language message
   saying how to fix it. Never a bare red border, never "Invalid input".
   (2026-08-21)
+- Signup button width: don't fix it (`w-44` etc.) just to stop the
+  loading-state label from resizing it — that makes the resting button
+  wider than its own text needs. Let it size to content
+  (`whitespace-nowrap`); a small width change when swapping to
+  "Sending" is fine, height/position don't move. (2026-08-21)
 - Fonts must stay clean and legible — Geist, Inter, IBM Plex. Arabic
   (often with French) needs IBM Plex Sans Arabic, never a browser
   fallback. (2026-08-21)
