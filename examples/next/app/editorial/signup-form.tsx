@@ -100,7 +100,7 @@ export default function SignupForm() {
         <Button
           type="submit"
           disabled={status === "sending"}
-          className="w-44 whitespace-nowrap"
+          className="whitespace-nowrap"
         >
           {status === "sending" ? (
             <>
