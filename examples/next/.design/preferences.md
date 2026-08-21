@@ -22,7 +22,7 @@ liked. Don't rebuild it unless asked again.
 ## Components
 
 - Button — `components/ui/button.tsx` (variants: primary, outline, soft,
-  danger, press; sizes: sm, md, **lg default**). The project's **only**
+  danger, press; sizes: sm, **md default**, lg). The project's **only**
   button. Need a new look? Add a variant/size here — never write a
   second button component.
 - Clinic dashboard — `app/clinic/page.tsx` (app shell: sidebar nav,
