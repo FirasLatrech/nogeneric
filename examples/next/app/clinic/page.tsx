@@ -66,14 +66,14 @@ export default function Clinic() {
               <input
                 type="search"
                 placeholder="Search patients, files, prescriptions…"
-                className="h-11 w-full max-w-md cursor-text rounded-md border border-line bg-bg pr-3 pl-11 text-base text-fg placeholder:text-subtle focus:border-ring focus:ring-2 focus:ring-ring/25 focus:outline-none md:h-12"
+                className="h-(--control-h) w-full max-w-md cursor-text rounded-md border border-line bg-bg pr-3 pl-11 text-base text-fg placeholder:text-subtle focus:border-ring focus:ring-2 focus:ring-ring/25 focus:outline-none"
               />
             </label>
 
             <button
               type="button"
               aria-label="Notifications, 2 unread"
-              className="relative flex size-11 cursor-pointer items-center justify-center rounded-md text-muted transition-colors duration-150 hover:bg-surface-hover hover:text-fg md:size-12"
+              className="relative flex size-10 cursor-pointer items-center justify-center rounded-md text-muted transition-colors duration-150 hover:bg-surface-hover hover:text-fg"
             >
               <BellBoldDuotoneIcon size={22} />
               <span className="absolute top-2 right-2 size-2 rounded-lg bg-danger" />

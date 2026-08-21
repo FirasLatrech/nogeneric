@@ -41,12 +41,13 @@ liked. Don't rebuild it unless asked again.
   before creating anything; extend it with a variant or prop instead of
   making a parallel component. Copy-pasted markup between files is the
   signal to extract a shared component. (2026-08-21)
-- **Buttons are `lg` app-wide by default** — chela's scale: `h-11 px-4
-  text-base` on mobile, `h-12 px-5` on desktop. `sm`/`md` exist on the
-  Button component for when a row genuinely needs to be more compact.
-  When a button sits beside an input/icon-button in one row, grow that
-  control to match (`h-11`/`h-12`) — a row of controls must stay one
-  straight bar, never a height mismatch. (2026-08-21)
+- **Reverted: buttons are back to the original flat `--control-h`
+  default** (the `md` size — `h-(--control-h) px-5`), not `lg`. Tried
+  making `lg` the app-wide default per an earlier ask; Firas asked to
+  revert both height and padding back to how it was. The Button
+  component keeps `sm`/`md`/`lg` as opt-in sizes for when a specific row
+  wants something else, but `md` is the default again. Do not default
+  to `lg` again without being asked. (2026-08-21)
 - App shells (dashboards) use **Solar Icons** (`@solar-icons/react`) at
   20–22px, colored with `--accent`, in the **BoldDuotone** weight — the
   two-tone fill reads richer than flat linear. Solar exports one

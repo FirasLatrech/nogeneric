@@ -14,12 +14,14 @@ export type ButtonVariant =
 
 export type ButtonSize = "sm" | "md" | "lg";
 
-// Height + horizontal padding + type scale, one step up at md breakpoint.
-// A row of mixed controls (button + input + select) must use the same
-// size here so they still line up — see references/components.md.
+// Height + horizontal padding + type scale. Default ("md") is the flat
+// --control-h every other control in the app uses, so a button always
+// lines up with the input/select/dropdown beside it without either one
+// needing an override. sm/lg are opt-in for a row that intentionally
+// wants a different scale — see references/components.md.
 const sizes: Record<ButtonSize, string> = {
-  sm: "h-8 gap-1.5 px-2.5 text-xs md:h-9 md:text-sm",
-  md: "h-9 gap-1.5 px-2.5 text-sm md:h-10 md:px-3 md:text-base",
+  sm: "h-8 gap-1.5 px-2.5 text-xs",
+  md: "h-(--control-h) gap-2 px-5 text-sm",
   lg: "h-11 gap-2 px-4 text-base md:h-12 md:px-5",
 };
 
@@ -50,7 +52,7 @@ type ButtonProps<T extends ElementType> = {
 export function Button<T extends ElementType = "button">({
   as,
   variant = "primary",
-  size = "lg",
+  size = "md",
   className = "",
   children,
   ...props

@@ -90,7 +90,7 @@ export default function SignupForm() {
               setTouched(true);
               setError(validate(email));
             }}
-            className={`h-11 w-full cursor-text rounded-md border bg-surface pr-4 pl-10 text-sm text-fg placeholder:text-subtle focus:ring-2 focus:outline-none md:h-12 ${
+            className={`h-(--control-h) w-full cursor-text rounded-md border bg-surface pr-4 pl-10 text-sm text-fg placeholder:text-subtle focus:ring-2 focus:outline-none ${
               error
                 ? "border-danger focus:border-danger focus:ring-danger/25"
                 : "border-line focus:border-ring focus:ring-ring/25"
@@ -100,7 +100,7 @@ export default function SignupForm() {
         <Button
           type="submit"
           disabled={status === "sending"}
-          className="w-48 whitespace-nowrap"
+          className="w-44 whitespace-nowrap"
         >
           {status === "sending" ? (
             <>

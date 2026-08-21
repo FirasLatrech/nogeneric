@@ -74,12 +74,12 @@ export default function Terminal() {
             <input
               type="search"
               placeholder="Filter monitors…"
-              className="h-11 w-full cursor-text rounded-md border border-line bg-surface pr-3 pl-10 text-sm text-fg placeholder:text-muted focus:border-ring focus:ring-2 focus:ring-ring/25 focus:outline-none md:h-12"
+              className="h-(--control-h) w-full cursor-text rounded-md border border-line bg-surface pr-3 pl-10 text-sm text-fg placeholder:text-muted focus:border-ring focus:ring-2 focus:ring-ring/25 focus:outline-none"
             />
           </label>
           <select
             defaultValue="all"
-            className="h-11 shrink-0 cursor-pointer rounded-md border border-line bg-surface px-3 text-sm text-fg focus:border-ring focus:ring-2 focus:ring-ring/25 focus:outline-none md:h-12"
+            className="h-(--control-h) shrink-0 cursor-pointer rounded-md border border-line bg-surface px-3 text-sm text-fg focus:border-ring focus:ring-2 focus:ring-ring/25 focus:outline-none"
           >
             <option value="all">All regions</option>
             <option value="eu">eu-west</option>
