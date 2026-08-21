@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+/*
+ * nogeneric token system.
+ * Tailwind utilities are wired to CSS variables, and each direction
+ * (.theme-*) redefines the variables. Zero raw hex outside these blocks.
+ */
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-subtle: var(--fg-subtle);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-ring: var(--ring);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-soft-fg: var(--accent-soft-fg);
+  --color-success-soft: var(--success-soft);
+  --color-success-soft-fg: var(--success-soft-fg);
+  --color-danger: var(--danger);
+
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+
+  --font-display: var(--font-display-face);
+  --font-body: var(--font-body-face);
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 25px;
+  --text-xl--line-height: 1.2;
+  --text-2xl: 31px;
+  --text-2xl--line-height: 1.15;
+  --text-3xl: 39px;
+  --text-3xl--line-height: 1.1;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-2: 0 4px 12px rgb(0 0 0 / 0.08);
+}
+
+.theme-landing {
+  --bg: #ffffff;
+  --surface: #f6f6f6;
+  --surface-hover: #ececec;
+  --fg: #0f0f0f;
+  --fg-muted: #6b6b6b;
+  --fg-subtle: #757575;
+  --border: #e4e4e4;
+  --border-strong: #c9c9c9;
+  --ring: var(--accent);
+  --accent: #9a3412;
+  --danger: #c0392b;
+  --accent-soft: #f6e5dc;
+  --accent-soft-fg: #8a2f10;
+  --success-soft: #dcf0e3;
+  --success-soft-fg: #1a6636;
+  --r-sm: 0px;
+  --r-md: 0px;
+  --r-lg: 2px;
+  --control-h: 40px;
+  --font-display-face: var(--font-instrument);
+  --font-body-face: var(--font-geist);
+}
+
+.theme-clinic {
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --surface-hover: #eef2f7;
+  --fg: #101828;
+  --fg-muted: #5c6b7a;
+  --fg-subtle: #6b7885;
+  --border: #dde3ea;
+  --border-strong: #c3ccd6;
+  --ring: var(--accent);
+  --accent: #0b6e63;
+  --danger: #b42318;
+  --accent-soft: #d7ebe8;
+  --accent-soft-fg: #075a51;
+  --success-soft: #dcf0e3;
+  --success-soft-fg: #1a6636;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --control-h: 40px;
+  --font-display-face: var(--font-archivo);
+  --font-body-face: var(--font-source-sans);
+}
+
+.theme-terminal {
+  --bg: #0c0c0c;
+  --surface: #161616;
+  --surface-hover: #1f1f1f;
+  --fg: #f2f2f2;
+  --fg-muted: #9a9a9a;
+  --fg-subtle: #858585;
+  --border: #2a2a2a;
+  --border-strong: #3d3d3d;
+  --ring: var(--accent);
+  --accent: #00ff88;
+  --danger: #ff5555;
+  --accent-soft: #0f2b1e;
+  --accent-soft-fg: #00ff88;
+  --success-soft: #0f2b1e;
+  --success-soft-fg: #00ff88;
+  --r-sm: 2px;
+  --r-md: 2px;
+  --r-lg: 4px;
+  --control-h: 36px;
+  --font-display-face: var(--font-jetbrains);
+  --font-body-face: var(--font-geist);
+}
+
+.theme-editorial {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-hover: #f5f5f5;
+  --fg: #0a0a0a;
+  --fg-muted: #525252;
+  --fg-subtle: #737373;
+  --border: #e5e5e5;
+  --border-strong: #d4d4d4;
+  --ring: var(--accent);
+  --accent: #dc2626;
+  --danger: #dc2626;
+  --accent-soft: #fee2e2;
+  --accent-soft-fg: #b91c1c;
+  --success-soft: #dcfce7;
+  --success-soft-fg: #15803d;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --control-h: 40px;
+  --font-display-face: var(--font-fraunces);
+  --font-body-face: var(--font-inter);
+}
+
+.theme-brutalist {
+  --bg: #f5f5f0;
+  --surface: #ffffff;
+  --surface-hover: #ebebe4;
+  --fg: #111111;
+  --fg-muted: #5a5a5a;
+  --fg-subtle: #666666;
+  --border: #111111;
+  --border-strong: #000000;
+  --ring: var(--accent);
+  --accent: #ff3b00;
+  --danger: #d00000;
+  --accent-soft: #ffdcd1;
+  --accent-soft-fg: #b32b00;
+  --success-soft: #d6f5e0;
+  --success-soft-fg: #146c32;
+  --r-sm: 0px;
+  --r-md: 0px;
+  --r-lg: 0px;
+  --control-h: 40px;
+  --font-display-face: var(--font-space-grotesk);
+  --font-body-face: var(--font-plex-mono);
+}
+
+/* ---- Motion tokens (see references/motion.md) ---- */
+
+:root {
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --ease-smooth: cubic-bezier(0.2, 0, 0, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse-dot {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Entrance: add .rise, stagger with .rise-2 … .rise-6 */
+.rise {
+  animation: rise var(--dur-3) var(--ease-smooth) both;
+}
+.rise-2 { animation-delay: 80ms; }
+.rise-3 { animation-delay: 160ms; }
+.rise-4 { animation-delay: 240ms; }
+.rise-5 { animation-delay: 320ms; }
+.rise-6 { animation-delay: 400ms; }
+
+/* Per-family pacing: dense/loud directions move faster */
+.theme-terminal .rise,
+.rise.theme-clinic {
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --surface-hover: #eef2f7;
+  --fg: #101828;
+  --fg-muted: #5c6b7a;
+  --fg-subtle: #6b7885;
+  --border: #dde3ea;
+  --border-strong: #c3ccd6;
+  --ring: var(--accent);
+  --accent: #0b6e63;
+  --danger: #b42318;
+  --accent-soft: #d7ebe8;
+  --accent-soft-fg: #075a51;
+  --success-soft: #dcf0e3;
+  --success-soft-fg: #1a6636;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --control-h: 40px;
+  --font-display-face: var(--font-archivo);
+  --font-body-face: var(--font-source-sans);
+}
+
+.theme-terminal {
+  animation-duration: var(--dur-2);
+}
+.theme-brutalist .rise,
+.rise.theme-brutalist {
+  animation-duration: var(--dur-1);
+}
+
+/* Live-status pulse (Terminal) */
+.pulse {
+  animation: pulse-dot 2s var(--ease-smooth) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
